@@ -42,7 +42,7 @@ with BuildPart() as wall_flange:
             (-vent_w/2 - vent_b/4, -vent_h/4)
         ):
              Circle(hole_dia/2)
-    extrude(amount=wall_thickness, mode=Mode.SUBTRACT)
+    extrude(amount=2*wall_thickness, mode=Mode.ADD)
 
 show_object(wall_flange)
 
