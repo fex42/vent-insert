@@ -2,9 +2,9 @@ from ocp_vscode import show, show_object, reset_show, set_port, set_defaults, ge
 set_port(3939)
 from build123d import *
 
-vent_h = 300.0
-vent_w = 200.0
-vent_b = 40.0
+vent_h = 190.0
+vent_w = 240.0
+vent_b = 36.0
 wall_thickness = 2.5
 pipe_height = 16.0
 flange_dia = 128.0
@@ -28,7 +28,7 @@ with BuildPart() as wall_flange:
     # hexagon grid
     with BuildSketch() as grid_sk:
         Rectangle(vent_w+vent_b, vent_h+vent_b)
-        with HexLocations(apothema, 15, 19):
+        with HexLocations(apothema, 18, 14):
             RegularPolygon(apothema, 6, mode=Mode.SUBTRACT)
     extrude(amount=wall_thickness)
     # screw holes
